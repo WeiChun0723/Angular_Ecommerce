@@ -1,4 +1,4 @@
-# Angular_Ecommerce
+# Angular Ecommerce
 
 This is a Ecommerce project build with Angular framework and using json-server to mock the back end response.
 
