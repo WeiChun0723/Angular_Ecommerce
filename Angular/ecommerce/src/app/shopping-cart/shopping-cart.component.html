@@ -1,0 +1,43 @@
+<div class="alert alert-danger" *ngIf="message">{{ message }}</div>
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th colspan="2">Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cartItem of shoppingCart; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td><img [src]="cartItem.product.photo" class="img-thumbnail" width="150" /></td>
+                    <td>
+                        <h5 class="card-title">{{ cartItem.product.name }}</h5>
+                        <p class="card-text">{{ cartItem.product.description }}</p>
+                    </td>
+                    <td>
+                        <h6 [class.lessquantity]="cartItem.product.quantity < 20">
+                            {{ cartItem.product.quantity }}</h6>
+                    </td>
+                    <td>
+                        <h6
+                            [style.color]="(cartItem.product.price < 1000) ? 'green' : (cartItem.product.price < 2000) ? 'blue' : 'red'">
+                            {{ cartItem.product.price | currency:"RM" }}</h6>
+                    </td>
+                    <td>
+                        <input type="text" name="requiredQuantity" #requiredQuantity size="3" maxlength="3"
+                            [value]="cartItem.requiredQuantity" />&nbsp;
+                        <button class="btn btn-primary" (click)="doUpdate(cartItem, requiredQuantity)">
+                            Update</button>&nbsp;
+                        <button class="btn btn-danger" (click)="doDelete(cartItem)">
+                            Delete</button>&nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<td>{{ index + 1 }}</td>
+<td><img [src]="product.photo" class="img-thumbnail" width="150"/></td>
+<td>
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+</td>
+<td>
+    <h6 [class.lessquantity]="product.quantity < 20">
+        {{ product.quantity }}</h6>        
+</td>
+<td>
+    <h6 [style.color]="(product.price < 1000) ? 'green' : (product.price < 2000) ? 'blue' : 'red'">
+        {{ product.price | currency:"RM" }}</h6>        
+</td>
+<td>
+    <input type="text" name="requiredQuantity" #requiredQuantity 
+        size="3" maxlength="3"/>&nbsp;
+    <button class="btn btn-primary" [disabled]="product.quantity < 20"
+        (click)="addToCart(product, requiredQuantity)">
+        Add to Cart</button>
+</td>

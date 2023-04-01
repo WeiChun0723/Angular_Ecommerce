@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "JavaScript Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "echo \"Welcome to Javascript Tutorial\" && node helloworld.js && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "Tutorial"
+  ],
+  "author": "Jegan",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}

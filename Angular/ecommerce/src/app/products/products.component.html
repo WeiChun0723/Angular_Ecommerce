@@ -1,0 +1,67 @@
+<!-- 
+    product Template Input Variable it is a variable 
+    created at the template (DOM) instead of creating it 
+    inside the component (VDOM)
+-->
+<!--
+<ol>
+    <li *ngFor="let product of products">{{ product }}</li>
+</ol>
+-->
+<div class="row">
+    <div class="col-9">
+        <input type="text" class="form-control" name="keyword"
+            (keyup)="doSearch($event)"/>
+        <ol *ngIf="searchResults">
+            <li *ngFor="let product of searchResults">{{ product.name }}</li>
+        </ol>
+    </div>
+    <div class="col-2">
+        <button type="button" class="btn btn-primary position-relative">
+            Cart
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{ shoppingCart.length }}
+            </span>
+        </button>
+    </div>
+    <div class="col-1" style="padding-bottom:15px">
+        <button class="btn btn-success" style="float:right"
+            (click)="doChangeView()">List</button>
+    </div>
+</div>
+<div class="row" *ngIf="isGallery">
+    <div class="col-4" *ngFor="let currentproduct of products" style="padding-bottom:15px">
+        <app-product-gallery [product]="currentproduct"
+            (notify)="addToCart($event)"></app-product-gallery>
+    </div>
+</div>
+<div class="row" *ngIf="!isGallery">
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th [attr.colspan]="colspan">Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--
+                <tr *ngFor="let currentproduct of products; let i = index">
+                    <app-product-list [product]="currentproduct" [index]="i">
+                    </app-product-list>
+                </tr>
+                <tr *ngFor="let currentproduct of products; let i = index" 
+                    app-product-list [product]="currentproduct" [index]="i">
+                </tr>
+                -->
+                <tr *ngFor="let currentproduct of products; let i = index" 
+                    class="app-product-list" [product]="currentproduct" [index]="i"
+                    (notify)="addToCart($event)">
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

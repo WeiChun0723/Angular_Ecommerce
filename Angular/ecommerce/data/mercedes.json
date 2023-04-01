@@ -1,0 +1,62 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Television",
+      "description": "To watch movies",
+      "quantity": 10,
+      "price": 1245.55,
+      "photo": "https://static.toiimg.com/thumb/msid-74476176,width-400,resizemode-4/74476176.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Radio",
+      "description": "To listen music",
+      "quantity": 50,
+      "price": 480.5,
+      "photo": "https://cdn.dribbble.com/users/237893/screenshots/819450/birafmv2.png"
+    },
+    {
+      "id": 3,
+      "name": "Handphone",
+      "description": "To communicate",
+      "quantity": 70,
+      "price": 723.75,
+      "photo": "https://static.toiimg.com/thumb/msid-87502279,width-400,resizemode-4/87502279.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Computer",
+      "description": "To play games",
+      "quantity": 30,
+      "price": 3457.25,
+      "photo": "https://qph.cf2.quoracdn.net/main-qimg-022f1381262571d075a017094d5ccb52-lq"
+    },
+    {
+      "id": 5,
+      "name": "Laptop",
+      "description": "To do work",
+      "quantity": 25,
+      "price": 4835.95,
+      "photo": "https://cdn.britannica.com/37/100537-050-910FC8A3/computer.jpg?w=400&h=300&c=crop"
+    },
+    {
+      "id": 6,
+      "name": "Bicycle",
+      "description": "To travel",
+      "quantity": 53,
+      "price": 358.25,
+      "photo": "https://static.toiimg.com/thumb/msid-83535118,width-400,resizemode-4/83535118.jpg"
+    }
+  ],
+  "shoppingcart": [],
+  "users": [
+    {
+      "email": "peter@gmail.com",
+      "password": "$2a$10$TkPgxtU1RJEBzvoi4RAPgu02AHAcGwHOzfXNyk6npuESMljTnFbjy",
+      "id": 1,
+      "firstname": "Peter",
+      "lastname": "Parker"
+    }
+  ]
+}
