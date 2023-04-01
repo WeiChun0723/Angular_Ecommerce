@@ -7,6 +7,7 @@ Technology stack
 2. NPM
 3. Nodejs
 4. Json server / Json-auth-server (mock backend response)
+5. Bootstrap (front end styling)
 
 In the project include following folder:
 1. Notes (Angular framework basic explanation with diagram)
